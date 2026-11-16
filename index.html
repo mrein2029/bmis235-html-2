@@ -16,7 +16,8 @@
 body { font-family: Calibri, sans-serif; margin: 0; padding: 0 20px; }
 h1   { text-align: center; }
 h2   { text-align: center; }
-a    { color: inherit; "#FF91E6";}
+a { color: inherit; }
+button { color: inherit; background: transparent; border: 1px solid currentColor; }
 
 ul {
     margin: 0;
@@ -112,7 +113,8 @@ ul {
   // 1. Your two colors. Change these to your own.
   var lightColor = "#fae63c";
   var darkColor  = "#000ab0";
-  var lightColor = "#ff91e6";
+  var pinkOnBlue = "#ff91e6";
+  var pinkOnYellow = "#990052";
 
   // 2. Which mode the page is in right now
   var dark = false;
@@ -122,10 +124,10 @@ ul {
     var pageColor  = dark ? darkColor  : lightColor;
     var blockColor = dark ? lightColor : darkColor;
     document.body.style.backgroundColor = pageColor;
-    document.body.style.color = dark ? "white" : "black";
+    document.body.style.color = dark ? pinkOnBlue : pinkOnYellow;
     var block = document.getElementById("embed-block");
     block.style.backgroundColor = blockColor;
-    block.style.color = dark ? "yellow" : "blue";
+    block.style.color = dark ? pinkOnYellow : pinkOnBlue;
   }
 
   // 4. When the button is clicked: flip the mode, then repaint
